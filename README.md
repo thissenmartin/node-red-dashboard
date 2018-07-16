@@ -136,7 +136,7 @@ behavior to any of the [project's core team](https://github.com/orgs/node-red/te
 
 ```
 cd ~\.node-red\node_modules
-git clone https://github.com/node-red/node-red-dashboard.git
+git clone https://github.com/thissenmartin/node-red-dashboard.git
 cd node-red-dashboard
 npm install
 ```

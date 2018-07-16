@@ -54,6 +54,7 @@
             "ui_date_picker": "nodes/ui_date_picker.js",
             "ui_colour_picker": "nodes/ui_colour_picker.js",
             "ui_form": "nodes/ui_form.js",
+            "ui_conv_form": "nodes/ui_conv_form.js",
             "ui_text": "nodes/ui_text.js",
             "ui_gauge": "nodes/ui_gauge.js",
             "ui_chart": "nodes/ui_chart.js",
