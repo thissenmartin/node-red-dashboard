@@ -251,6 +251,33 @@ angular.module('ui').controller('uiComponentController', ['$scope', 'UiEvents', 
                     break;
                 }
 
+                case 'conv_form': {
+                    me.stop = function(event) {
+                        if ((event.charCode === 13) || (event.which === 13)) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                    }
+                    me.submit = function () {
+                        me.item.value = JSON.parse(JSON.stringify(me.item.formValue));
+                        me.valueChanged(0);
+                        me.reset();
+                    };
+                    me.reset = function () {
+                        for (var x in me.item.formValue) {
+                            if (typeof (me.item.formValue[x]) === "boolean") {
+                                me.item.formValue[x] = false;
+                            }
+                            else {
+                                me.item.formValue[x] = "";
+                            }
+                        }
+                        $scope.$$childTail.form.$setUntouched();
+                        $scope.$$childTail.form.$setPristine();
+                    };
+                    break;
+                }
+
                 case 'template' : {
                     me.setFormat = function (format) {
                         me.item.format = format;
